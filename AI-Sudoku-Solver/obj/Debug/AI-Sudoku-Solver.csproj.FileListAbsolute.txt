@@ -1,0 +1,6 @@
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\obj\Debug\AI-Sudoku-Solver.csprojAssemblyReference.cache
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\obj\Debug\AI-Sudoku-Solver.csproj.CoreCompileInputs.cache
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\bin\Debug\AI_Sudoku_Solver.exe
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\bin\Debug\AI_Sudoku_Solver.pdb
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\obj\Debug\AI_Sudoku_Solver.exe
+C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver\AI-Sudoku-Solver\obj\Debug\AI_Sudoku_Solver.pdb
