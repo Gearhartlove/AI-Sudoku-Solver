@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,85 +33,21 @@
       </content>
     </window>
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <marker date="1631250719021" expanded="true" signature="42:217" ph="{...}" />
-                <marker date="1631250719021" expanded="true" signature="68:215" ph="{...}" />
-                <marker date="1631250719021" expanded="true" signature="111:212" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
-              <folding>
-                <marker date="1631250719015" expanded="true" signature="6:30" ph="..." />
-                <marker date="1631250719015" expanded="true" signature="58:2697" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="138:165" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="214:241" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="289:315" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="347:478" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="432:462" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="511:642" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="596:626" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="682:913" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="808:897" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="855:893" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="959:1091" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1022:1072" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1138:1270" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1201:1251" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1325:1546" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1426:1527" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1473:1523" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1588:1907" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1704:1904" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1770:1881" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1790:1820" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="1946:2058" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2092:2310" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2144:2294" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2177:2272" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2348:2695" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2400:2679" ph="{...}" />
-                <marker date="1631250719015" expanded="true" signature="2498:2657" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding>
-                <marker date="1631249833382" expanded="true" signature="33:221" ph="{...}" />
-                <marker date="1631249833382" expanded="true" signature="106:219" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,6 +65,7 @@
     <option name="width" value="1094" />
     <option name="height" value="947" />
   </component>
+  <component name="ProjectId" id="1xxELaqpw2hS9V82K76txuKg4bx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -165,25 +95,20 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
@@ -201,10 +126,11 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -216,6 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631230181205</updated>
       <workItem from="1631230184148" duration="11848000" />
+      <workItem from="1631288289760" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="Added solution to Git">
       <created>1631230506241</created>
@@ -270,14 +197,28 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added solution to Git" />
     <option name="LAST_COMMIT_MESSAGE" value="Added solution to Git" />
   </component>
