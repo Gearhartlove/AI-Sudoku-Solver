@@ -33,6 +33,8 @@
           <e p="Med-P4.csv" t="Include" />
           <e p="Med-P5.csv" t="Include" />
         </e>
+        <e p="SudokuPuzzle.cs" t="Include" />
+        <e p="Util.cs" t="Include" />
       </e>
       <e p="AI-Sudoku-Solver.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
