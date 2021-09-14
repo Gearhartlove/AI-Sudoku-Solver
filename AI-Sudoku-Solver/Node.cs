@@ -6,10 +6,6 @@ namespace AI_Sudoku_Solver
     {
         public Node parent;
         public List<Node> next_nodes = new List<Node>();
-        private int value = 0; //Sudoku Value
+        private int value = 0; //Sudoku Value // Do we need this?
     }
-    
-    //Delve()
-    
-    //Backtrack() ? 
 }

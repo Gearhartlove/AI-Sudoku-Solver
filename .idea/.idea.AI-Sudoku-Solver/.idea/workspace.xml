@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +41,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
