@@ -38,11 +38,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Node.cs" />
-        <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="SudokuPuzzle.cs" />
-        <Compile Include="Util.cs" />
+        <Compile Include=".\*.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include=".\puzzles\*.csv" CopyToOutputDirectory="Always" />
