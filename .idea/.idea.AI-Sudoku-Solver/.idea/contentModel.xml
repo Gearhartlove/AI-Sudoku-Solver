@@ -15,6 +15,7 @@
         </e>
         <e p="PuzzleChecker.cs" t="Include" />
         <e p="puzzles" t="Include">
+          <e p="Backtracking.cs" t="Include" />
           <e p="Easy-P1.csv" t="Include" />
           <e p="Easy-P2.csv" t="Include" />
           <e p="Easy-P3.csv" t="Include" />
