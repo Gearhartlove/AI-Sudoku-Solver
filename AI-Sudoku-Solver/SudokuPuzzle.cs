@@ -4,13 +4,29 @@ using System.IO;
 public class SudokuPuzzle {
 
 	private int[,] cells = new int[9,9];
+	private bool[,] lockedCells = new bool[9,9];
 
 	public SudokuPuzzle(string filename) {
 		fromFile(filename);	
+		
+		for(int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				lockedCells[i, j] = false;
+			}
+		}
 	}
 
-	public void setValue(int x, int y, int value) {
+	public int setValue(int x, int y, int value) {
+		if (isLocked(x, y)) return cells[x, y];
 		cells[x, y] = value;
+		return value;
+	}
+
+	public int setLockedValue(int x, int y, int value) {
+		if (isLocked(x, y)) return cells[x, y];
+		cells[x, y] = value;
+		lockedCells[x, y] = true;
+		return value;
 	}
 
 	public int getValue(int x, int y, int value) {
@@ -50,6 +66,10 @@ public class SudokuPuzzle {
 		}
 
 		return s;
+	}
+
+	public bool isLocked(int x, int y) {
+		return lockedCells[x, y];
 	}
 
 	public bool isLegalRow(int row, int value) {
