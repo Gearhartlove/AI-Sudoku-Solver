@@ -6,6 +6,7 @@
     <e p="C:\Users\aweso\Desktop\Projects\AI-Sudoku-Solver" t="IncludeFlat">
       <e p="AI-Sudoku-Solver" t="IncludeRecursive">
         <e p="AI-Sudoku-Solver.csproj" t="IncludeRecursive" />
+        <e p="Backtracking.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Node.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
@@ -15,7 +16,6 @@
         </e>
         <e p="PuzzleChecker.cs" t="Include" />
         <e p="puzzles" t="Include">
-          <e p="Backtracking.cs" t="Include" />
           <e p="Easy-P1.csv" t="Include" />
           <e p="Easy-P2.csv" t="Include" />
           <e p="Easy-P3.csv" t="Include" />

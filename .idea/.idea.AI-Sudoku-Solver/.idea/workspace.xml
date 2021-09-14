@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" afterDir="false" />
-    </list>
+    <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,54 +48,46 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/AI-Sudoku-Solver.csproj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="437">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
-                <marker date="1631645827009" expanded="false" signature="6:30" ph="..." />
-                <marker date="1631645827009" expanded="true" signature="58:2977" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="184:318" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="241:315" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="274:311" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="366:451" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="499:525" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="557:688" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="642:672" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="721:852" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="806:836" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="892:1123" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1018:1107" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1065:1103" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1161:1193" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1239:1371" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1302:1352" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1418:1550" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1481:1531" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1605:1826" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1706:1807" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1753:1803" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1868:2187" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="1984:2184" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2050:2161" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2070:2100" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2226:2338" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2372:2590" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2424:2574" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2457:2552" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2628:2975" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2680:2959" ph="{...}" />
-                <marker date="1631645827009" expanded="true" signature="2778:2937" ph="{...}" />
+                <marker date="1631646356783" expanded="false" signature="6:30" ph="..." />
+                <marker date="1631646356783" expanded="true" signature="58:3144" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="184:318" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="241:315" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="274:311" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="366:451" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="505:618" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="666:692" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="724:855" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="809:839" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="888:1019" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="973:1003" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1059:1290" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1185:1274" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1232:1270" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1328:1360" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1406:1538" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1469:1519" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1585:1717" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1648:1698" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1772:1993" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1873:1974" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="1920:1970" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2035:2354" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2151:2351" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2217:2328" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2237:2267" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2393:2505" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2539:2757" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2591:2741" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2624:2719" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2795:3142" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2847:3126" ph="{...}" />
+                <marker date="1631646356783" expanded="true" signature="2945:3104" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,7 +121,7 @@
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/PuzzleChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -257,11 +243,18 @@
       <option name="project" value="LOCAL" />
       <updated>1631630894882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed issue with backtracking branch">
+      <created>1631646396106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631646396106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20095000" />
+    <option name="totallyTimeSpent" value="20185000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,10 +267,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-565" width="1096" height="1896" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23240116" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23240116" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="1" />
@@ -286,7 +278,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32976928" />
       <window_info anchor="bottom" id="Performance Profiler" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32864377" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.16488464" />
       <window_info anchor="bottom" id="NuGet" order="8" />
       <window_info anchor="bottom" id="Message" order="9" />
       <window_info anchor="bottom" id="Find" order="10" />
@@ -315,7 +307,8 @@
     <MESSAGE value="Added solution to Git" />
     <MESSAGE value="Added Util class for low-level functions&#10;Added Sudoku Data Structure" />
     <MESSAGE value=".cs file automatically compile" />
-    <option name="LAST_COMMIT_MESSAGE" value=".cs file automatically compile" />
+    <MESSAGE value="fixed issue with backtracking branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with backtracking branch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Easy-P1.csv">
@@ -325,7 +318,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs">
+    <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Backtracking.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
@@ -391,42 +384,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="437">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
-            <marker date="1631645827009" expanded="false" signature="6:30" ph="..." />
-            <marker date="1631645827009" expanded="true" signature="58:2977" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="184:318" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="241:315" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="274:311" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="366:451" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="499:525" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="557:688" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="642:672" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="721:852" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="806:836" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="892:1123" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1018:1107" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1065:1103" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1161:1193" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1239:1371" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1302:1352" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1418:1550" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1481:1531" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1605:1826" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1706:1807" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1753:1803" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1868:2187" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="1984:2184" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2050:2161" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2070:2100" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2226:2338" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2372:2590" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2424:2574" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2457:2552" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2628:2975" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2680:2959" ph="{...}" />
-            <marker date="1631645827009" expanded="true" signature="2778:2937" ph="{...}" />
+            <marker date="1631646356783" expanded="false" signature="6:30" ph="..." />
+            <marker date="1631646356783" expanded="true" signature="58:3144" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="184:318" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="241:315" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="274:311" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="366:451" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="505:618" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="666:692" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="724:855" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="809:839" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="888:1019" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="973:1003" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1059:1290" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1185:1274" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1232:1270" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1328:1360" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1406:1538" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1469:1519" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1585:1717" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1648:1698" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1772:1993" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1873:1974" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="1920:1970" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2035:2354" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2151:2351" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2217:2328" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2237:2267" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2393:2505" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2539:2757" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2591:2741" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2624:2719" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2795:3142" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2847:3126" ph="{...}" />
+            <marker date="1631646356783" expanded="true" signature="2945:3104" ph="{...}" />
           </folding>
         </state>
       </provider>

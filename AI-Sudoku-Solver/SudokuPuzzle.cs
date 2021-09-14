@@ -113,7 +113,7 @@ public class SudokuPuzzle {
 				if (i == "?") {
 					cells[x, y] = -1;
 				} else {
-					cells[x,y] = Int32.Parse(i);
+					this.setLockedValue(x, y, Int32.Parse(i));
 				}
 				x++;
 			}
