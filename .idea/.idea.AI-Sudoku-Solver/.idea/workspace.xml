@@ -1,112 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <marker date="1631250841911" expanded="true" signature="42:217" ph="{...}" />
-                <marker date="1631250841911" expanded="true" signature="68:215" ph="{...}" />
-                <marker date="1631250841911" expanded="true" signature="111:212" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/PuzzleChecker.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-              <folding>
-                <marker date="1631483949852" expanded="false" signature="6:32" ph="..." />
-                <marker date="1631483949852" expanded="true" signature="60:3495" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="86:3493" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="206:2664" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="381:897" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="524:666" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1010:1550" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1159:1307" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1703:2600" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1761:2586" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1914:2335" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="1988:2313" ph="{...}" />
-                <marker date="1631483949852" expanded="true" signature="2708:3487" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding>
-                <marker date="1631646356783" expanded="false" signature="6:30" ph="..." />
-                <marker date="1631646356783" expanded="true" signature="58:3144" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="184:318" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="241:315" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="274:311" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="366:451" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="505:618" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="666:692" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="724:855" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="809:839" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="888:1019" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="973:1003" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1059:1290" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1185:1274" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1232:1270" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1328:1360" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1406:1538" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1469:1519" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1585:1717" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1648:1698" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1772:1993" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1873:1974" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="1920:1970" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2035:2354" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2151:2351" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2217:2328" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2237:2267" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2393:2505" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2539:2757" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2591:2741" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2624:2719" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2795:3142" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2847:3126" ph="{...}" />
-                <marker date="1631646356783" expanded="true" signature="2945:3104" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding>
-                <marker date="1631249833382" expanded="true" signature="33:221" ph="{...}" />
-                <marker date="1631249833382" expanded="true" signature="106:219" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -119,9 +27,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/PuzzleChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -177,18 +86,6 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" />
@@ -205,7 +102,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
@@ -298,8 +195,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />

@@ -31,9 +31,11 @@ namespace AI_Sudoku_Solver
        /// </summary>
        private SudokuPuzzle[] GenerateRandomizePopulation(SudokuPuzzle[] population, in SudokuPuzzle original)
        {
+           Console.WriteLine("original");
+           Console.WriteLine(original);
            for (int i = 0; i < popSize; i++)
            {
-               SudokuPuzzle newRandPop = original; //Q: how to assign this variable to a value???
+               SudokuPuzzle newRandPop = new SudokuPuzzle("Easy-P1.csv"); //Q: how to assign this variable to a value???
                
                //go through each cell, check if it can be change; if it can be changed, assign random number to it]
                for (int column = 0; column < 9; column++)
@@ -41,8 +43,11 @@ namespace AI_Sudoku_Solver
                    for (int row = 0; row < 9; row++)
                    {
                        //check if cell is changeable
-                       //set value:
-                       newRandPop.setValue(column, row, rand.Next(0, 10));
+                       if (!newRandPop.isLocked(column, row))
+                       {
+                           newRandPop.setValue(column, row, rand.Next(0, 10));
+                       }
+                       
                    }
                }
               
