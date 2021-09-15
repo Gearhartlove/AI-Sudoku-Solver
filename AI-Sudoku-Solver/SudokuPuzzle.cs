@@ -29,9 +29,15 @@ public class SudokuPuzzle {
 		return value;
 	}
 
-	public int getValue(int x, int y, int value) {
+	public int getValue(int x, int y) {
 		return cells[x, y];
 	}
+
+	public bool getLockedValue(int x, int y)
+	{
+		return lockedCells[x, y];
+	}
+	
 
 	public int[] getRow(int row) {
 		row = Util.Clamp(row, 0, 8);

@@ -20,7 +20,7 @@ namespace AI_Sudoku_Solver
            rand = new Random();
            OriginalPuzzle = new SudokuPuzzle("Easy-P1.csv"); //TODO Change later for all files implementation
            SudokuPuzzle[] blankPopulation = new SudokuPuzzle[popSize];
-           SudokuPuzzle[] randomPopulation = GenerateRandomizePopulation(blankPopulation, in OriginalPuzzle);
+           SudokuPuzzle[] randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
            //GenerateRandomPop(); //can be used by both Local Search Algorithms
            //   -> work with the SudokuPuzzle Class
            //HillClimb(); //can be used by both Local Search Algorithms //Annealing will have a more tricks
@@ -29,32 +29,24 @@ namespace AI_Sudoku_Solver
        /// <summary>
        /// Randomizes the initial population
        /// </summary>
-       private SudokuPuzzle[] GenerateRandomizePopulation(SudokuPuzzle[] population, in SudokuPuzzle original)
+       private SudokuPuzzle[] GenerateRandomBoard(SudokuPuzzle[] population, in SudokuPuzzle original)
        {
-           Console.WriteLine("original");
-           Console.WriteLine(original);
            for (int i = 0; i < popSize; i++)
            {
-               SudokuPuzzle newRandPop = new SudokuPuzzle("Easy-P1.csv"); //Q: how to assign this variable to a value???
-               
+               SudokuPuzzle newRandPop = new SudokuPuzzle("Easy-P1.csv"); 
                //go through each cell, check if it can be change; if it can be changed, assign random number to it]
                for (int column = 0; column < 9; column++)
                {
                    for (int row = 0; row < 9; row++)
-                   {
-                       //check if cell is changeable
-                       if (!newRandPop.isLocked(column, row))
-                       {
-                           newRandPop.setValue(column, row, rand.Next(0, 10));
-                       }
-                       
+                   { 
+                       //change values of cells which are not already filled from start state
+                       if (newRandPop.getValue(column, row) == -1)
+                           newRandPop.setValue(column, row, rand.Next(1, 10));
+                       //lock already filled cells in
+                       else
+                           newRandPop.setLockedValue(column, row, newRandPop.getValue(column, row));
                    }
                }
-              
-               Console.WriteLine("Random Generated: ");
-               Console.WriteLine(newRandPop);
-               //randomize locations
-               
                population[i] = newRandPop;
            }
            return population;
