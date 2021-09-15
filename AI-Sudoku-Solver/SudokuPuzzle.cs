@@ -6,14 +6,29 @@ public class SudokuPuzzle {
 	private int[,] cells = new int[9,9];
 	private bool[,] lockedCells = new bool[9,9];
 
-	public SudokuPuzzle(string filename) {
-		fromFile(filename);	
+	public SudokuPuzzle() {
+		for(int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				cells[i, j] = -1;
+				lockedCells[i, j] = false;
+			}
+		}
 		
+	}
+	
+	public SudokuPuzzle(int[,] cells, bool[,] lockedCells) {
+		this.cells = cells;
+		this.lockedCells = lockedCells;
+	}
+	
+	public SudokuPuzzle(string filename) {
 		for(int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				lockedCells[i, j] = false;
 			}
 		}
+		
+		fromFile(filename);
 	}
 
 	public int setValue(int x, int y, int value) {
@@ -29,7 +44,7 @@ public class SudokuPuzzle {
 		return value;
 	}
 
-	public int getValue(int x, int y, int value) {
+	public int getValue(int x, int y) {
 		return cells[x, y];
 	}
 
@@ -103,6 +118,16 @@ public class SudokuPuzzle {
 		return true;
 	}
 
+	public bool isLegalMove(int x, int y, int value) {
+		return isLegalCol(x, value)
+		    && isLegalRow(y, value)
+		    && isLegalSquare(x / 3, y / 3, value);
+	}
+
+	public SudokuPuzzle copy() {
+		return new SudokuPuzzle(cells.Clone() as int[,], lockedCells.Clone() as bool[,]);
+	}
+
 	private void fromFile(string filename) {
 		string[] lines = File.ReadAllLines("./puzzles/" + filename);
 
@@ -149,7 +174,7 @@ public class SudokuPuzzle {
 		string o = "";
 		
 		for (int y = 0; y < 9; y++) {
-			if (y == 0 || y == 3 || y == 6) o += "-------------------\n";
+			if (y == 0 || y == 3 || y == 6) o += "+-----------------+\n";
 			for (int x = 0; x < 9; x++) {
 				if (x == 0 || x == 3 || x == 6) o += "|";
 				else o += " ";
@@ -161,6 +186,8 @@ public class SudokuPuzzle {
 			o += "\n";
 		}
 
+		o += "+-----------------+";
+		
 		return o;
 	}
 }
