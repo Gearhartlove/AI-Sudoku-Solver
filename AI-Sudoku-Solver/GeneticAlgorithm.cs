@@ -16,14 +16,16 @@ namespace AI_Sudoku_Solver
 
        public GeneticAlgorithm()
        {
-           //array instantiation
            rand = new Random();
            OriginalPuzzle = new SudokuPuzzle("Easy-P1.csv"); //TODO Change later for all files implementation
            SudokuPuzzle[] blankPopulation = new SudokuPuzzle[popSize];
+           //Generate Local Population
            SudokuPuzzle[] randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
-           //GenerateRandomPop(); //can be used by both Local Search Algorithms
-           //   -> work with the SudokuPuzzle Class
-           //HillClimb(); //can be used by both Local Search Algorithms //Annealing will have a more tricks
+           randomPopulation = HillClimb(randomPopulation); //can be used by both Local Search Algorithms //Annealing will have a more tricks
+           //Loop : stop when I have a solved board
+           //  Evaluate
+           //  Mutate
+           //  Tournament
        }
 
        /// <summary>
@@ -51,6 +53,17 @@ namespace AI_Sudoku_Solver
            }
            return population;
        }
+
+       /// <summary>
+       /// Used to create better population from the start, so that their traits are not terrible (should speed up
+       /// search a lot). 
+       /// </summary>
+       private SudokuPuzzle[] HillClimb(SudokuPuzzle[] population)
+       {
+            //int permutationCap = 2000; //can change based on algorithm execution
+           return population;
+       }
+       
        
        /// <summary>
        /// Mutates Population by using the X operation and Y Selection. (Still need to decide on these)

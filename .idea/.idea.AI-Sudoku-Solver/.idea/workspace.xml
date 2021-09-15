@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/RandomBoard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
     </list>
@@ -52,6 +48,7 @@
     <option name="width" value="1094" />
     <option name="height" value="947" />
   </component>
+  <component name="ProjectId" id="1yBBXOPF36wU4cYqxrl8EExOpsT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -80,6 +77,10 @@
         <option name="show-all-files" value="false" />
       </pane>
     </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -112,6 +113,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -124,6 +126,7 @@
       <updated>1631230181205</updated>
       <workItem from="1631230184148" duration="12247000" />
       <workItem from="1631403867858" duration="7848000" />
+      <workItem from="1631715145996" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="Added solution to Git">
       <created>1631230506241</created>
@@ -199,7 +202,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
