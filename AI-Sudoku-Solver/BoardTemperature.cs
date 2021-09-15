@@ -15,22 +15,21 @@ namespace AI_Sudoku_Solver
     {
         float temperature = 0; 
         
-        public static float GetBoardTemp(in SudokuPuzzle board)
-        {
-            //iterate over the board and explain how many constraints have been violated
-            cell
-            CheckCellViolations(board, cell); 
-            //debug
-            Console.WriteLine(temperature);
-            return temperature;
-        }
-
-        private void CheckCellViolations(in SudokuPuzzle board)
-        {
-            checkRow(boards);
-            checkColumn(boards);
-            checkBox(boards);
-        }
+        // public static float GetBoardTemp(in SudokuPuzzle board)
+        // {
+        //     //iterate over the board and explain how many constraints have been violated
+        //     temperature = CheckCellViolations(board, cell); 
+        //     //debug
+        //     Console.WriteLine(temperature);
+        //     return temperature;
+        // }
+        //
+        // private void CheckCellViolations(in SudokuPuzzle board)
+        // {
+        //     checkRow(boards);
+        //     checkColumn(boards);
+        //     checkBox(boards);
+        // }
         
         private void checkRow(in SudokuPuzzle[] board)
         {
@@ -43,7 +42,7 @@ namespace AI_Sudoku_Solver
         }
 
         //Check 3x3 Sudoku box
-        private float checkBox()
+        private void checkBox()
         {
             
         }

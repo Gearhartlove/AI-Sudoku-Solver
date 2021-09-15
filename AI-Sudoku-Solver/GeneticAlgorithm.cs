@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data.Common;
 
 namespace AI_Sudoku_Solver
@@ -6,7 +7,8 @@ namespace AI_Sudoku_Solver
     public class GeneticAlgorithm
     {
        //Generate Completely Random Board for Population
-       private const int popSize = 3;
+       private const int popSize = 15;
+       private const double SelectionPercentage = 1.0/3; 
        private Random rand;
        private SudokuPuzzle OriginalPuzzle;
        
@@ -21,11 +23,17 @@ namespace AI_Sudoku_Solver
            SudokuPuzzle[] blankPopulation = new SudokuPuzzle[popSize];
            //Generate Local Population
            SudokuPuzzle[] randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
-           randomPopulation = HillClimb(randomPopulation); //can be used by both Local Search Algorithms //Annealing will have a more tricks
+           SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
+            
+           //GenerateRandomBoards()
+           //Evaluate()
            //Loop : stop when I have a solved board
-           //  Evaluate
-           //  Mutate
-           //  Tournament
+           //  selectedPopulation[] = Selection(randomPopulation)
+           //  tournamentVictors[] = Tournament(selectedPopulation[]) 
+           //  Crossover(tournamentVictors[], randomPopulation) //using One Point Crossover ??? do more research 
+           //  Mutate(???) //Who am I mutating? How am I mutating them?
+           //  Evaluate(randomPopulation[])
+           //  randomPopulation = Replace(randomPopulation[]) //Who am I replacing? 
        }
 
        /// <summary>
@@ -55,15 +63,39 @@ namespace AI_Sudoku_Solver
        }
 
        /// <summary>
-       /// Used to create better population from the start, so that their traits are not terrible (should speed up
-       /// search a lot). 
+       /// Randomly Selects a portion of the population to take part in the tournament
+       /// Enter the tournament
        /// </summary>
-       private SudokuPuzzle[] HillClimb(SudokuPuzzle[] population)
+       private SudokuPuzzle[] Selection(SudokuPuzzle[] boards, double percentage)
        {
-            //int permutationCap = 2000; //can change based on algorithm execution
-           return population;
+           //pick X% of the population of the population
+           int selectPopNumber = (int)Math.Round(boards.Length * percentage);
+           SudokuPuzzle[] selectedPopulation = new SudokuPuzzle[selectPopNumber];
+           List<int> randomList = new List<int>();
+           int randomNumber = -1;
+           //Select Populations
+           for (int i = 0; i < selectPopNumber; i++)
+           {
+               do
+               {
+                   randomNumber = rand.Next(boards.Length);
+                   randomList.Add(randomNumber);
+               } while (!randomList.Contains(randomNumber));
+               selectedPopulation[i] = boards[randomNumber];
+           }
+           
+           return selectedPopulation;
        }
-       
+
+       /// <summary>
+       /// Survival of the fittest, based on initial selection of population. This is chosen using X. (Still neeed to
+       /// decide)
+       /// </summary>
+       private SudokuPuzzle Tournament(SudokuPuzzle[] selection)
+       {
+          //even
+          //odd
+       }
        
        /// <summary>
        /// Mutates Population by using the X operation and Y Selection. (Still need to decide on these)
@@ -73,14 +105,7 @@ namespace AI_Sudoku_Solver
            
        }
 
-       /// <summary>
-       /// Survival of the fittest, based on initial selection of population. This is chosen using X. (Still neeed to
-       /// decide)
-       /// </summary>
-       private void TournamentSelection()
-       {
-           
-       }
+       
        
        /// <summary>
        /// Instantiate GeneticAlgorithm object (calls the constructor) and have a while loop which runs until the

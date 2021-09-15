@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/contentModel.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
     </list>
@@ -24,12 +27,12 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/PuzzleChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/puzzles/Backtracking.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/SudokuPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Util.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AI-Sudoku-Solver/PuzzleChecker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,12 +86,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3496708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="false" />
@@ -127,6 +135,7 @@
       <workItem from="1631230184148" duration="12247000" />
       <workItem from="1631403867858" duration="7848000" />
       <workItem from="1631715145996" duration="3078000" />
+      <workItem from="1631733823897" duration="7463000" />
     </task>
     <task id="LOCAL-00001" summary="Added solution to Git">
       <created>1631230506241</created>
