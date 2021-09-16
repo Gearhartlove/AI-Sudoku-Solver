@@ -1,1 +1,6 @@
 .DS_Store
+
+/AI-Sudoku-Solver/obj/
+/AI-Sudoku-Solver/bin/
+/.idea/
+/.vs/
