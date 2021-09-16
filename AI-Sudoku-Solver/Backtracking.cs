@@ -1,15 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Diagnostics;
 
 namespace Backtracking {
 	public abstract class BacktrackingSolver {
+		
+		private Stopwatch stopwatch = new Stopwatch();
 		public SudokuPuzzle solve(SudokuPuzzle init) {
-			return recurse(new Node<SudokuPuzzle>(init));
+			stopwatch.Restart();
+			var r = recurse(new Node<SudokuPuzzle>(init));
+			stopwatch.Stop();
+			return r;
 		}
 
+
+		public long getElapsedTimeMili() {
+			return stopwatch.ElapsedMilliseconds;
+		}
+		
 		private SudokuPuzzle recurse(Node<SudokuPuzzle> currentNode) {
-			Console.Out.WriteLine(currentNode.getValue());
+			//Console.Out.WriteLine(currentNode.getValue());
 			
 			var puzzle = currentNode.getValue();
 			if (checkGoalState(puzzle)) return puzzle;
@@ -73,8 +84,7 @@ namespace Backtracking {
 		}
 
 		protected override bool checkGoalState(SudokuPuzzle puzzle) {
-			//counter++;
-			return goal || counter > 10;
+			return puzzle.getEmptyCellCount() == 0;
 		}
 	}
 
