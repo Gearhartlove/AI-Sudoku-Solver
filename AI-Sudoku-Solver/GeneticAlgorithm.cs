@@ -7,8 +7,9 @@ namespace AI_Sudoku_Solver
     public class GeneticAlgorithm
     {
        //Generate Completely Random Board for Population
-       private const int popSize = 15;
-       private const double SelectionPercentage = 0.20; 
+       private const int popSize = 20;
+       private const double SelectionPercentage = 0.20;
+       private const double SelectionPressure = 0.80;
        private Random rand;
        private SudokuPuzzle OriginalPuzzle;
        
@@ -23,7 +24,8 @@ namespace AI_Sudoku_Solver
            List<SudokuPuzzle> blankPopulation = new List<SudokuPuzzle>();
            //Generate Local Population
            List<SudokuPuzzle> randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
-           SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
+           Tournament(Selection(randomPopulation, SelectionPercentage), SelectionPressure);
+           //SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage), SelectionPressure);
 
            //GenerateRandomBoards()
            //Evaluate()
@@ -66,11 +68,11 @@ namespace AI_Sudoku_Solver
        /// Randomly Selects a portion of the population to take part in the tournament
        /// Enter the tournament
        /// </summary>
-       private SudokuPuzzle[] Selection(List<SudokuPuzzle> boards, double percentage)
+       private List<SudokuPuzzle> Selection(List<SudokuPuzzle> boards, double percentage)
        {
            //pick X% of the population of the population
            int selectPopNumber = (int)Math.Round(boards.Count * percentage);
-           SudokuPuzzle[] selectedPopulation = new SudokuPuzzle[selectPopNumber];
+           List<SudokuPuzzle> selectedPopulation = new List<SudokuPuzzle>();
            List<int> randomList = new List<int>();
            int randomNumber = -1;
            //Select Populations
@@ -81,9 +83,9 @@ namespace AI_Sudoku_Solver
                    randomNumber = rand.Next(boards.Count);
                    randomList.Add(randomNumber);
                } while (!randomList.Contains(randomNumber));
-               selectedPopulation[i] = boards[randomNumber];
+               selectedPopulation.Add(boards[randomNumber]);
            }
-           Console.WriteLine(selectedPopulation.Length);  
+           Console.WriteLine(selectedPopulation.Count);  
            return selectedPopulation;
        }
 
@@ -92,7 +94,7 @@ namespace AI_Sudoku_Solver
        /// decide). Selection Pressure determined by: p*(1-p)^a where p is probability and a is individual's fitness in
        /// the table
        /// </summary>
-       private SudokuPuzzle Tournament(List<SudokuPuzzle> selection, double percentage)
+       private void Tournament(List<SudokuPuzzle> selection, double percentage)
        {
            
        }
