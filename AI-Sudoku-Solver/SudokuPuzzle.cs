@@ -87,7 +87,6 @@ public class SudokuPuzzle {
 		
 		for (int j = y * 3; j < (y * 3) + 3; j++) {
 			for (int i = x * 3; i < (x * 3) + 3; i++) {
-				Console.Out.WriteLine(i + " | " + j);
 				s[(i - (x*3))  + ((j - (y*3)) * 3)] = cells[i, j];
 			}
 		}
@@ -146,45 +145,56 @@ public class SudokuPuzzle {
 	}
 
 	public int constraintTestRow(int row) {
-		row = Util.Clamp(row, 0, 8);
-		int count = 0;
-		var lookup = new[]{false, false, false, false, false, false, false, false, false};
+		var array = this.getRow(row);
+		var count = 0;
+		
 		for (int i = 0; i < 9; i++) {
-			var value = (cells[i, row] - 1);
-			if(value < 0) continue;
-			if (lookup[value]) count++;
-			else lookup[value] = true;
+			var value = array[i];
+			if(value == -1) continue;
+			for (int j = 0; j < 9; j++) {
+				if(j == i) continue;
+				if (value == array[j]) {
+					count++;
+					break;
+				}
+			}
 		}
 
 		return count;
 	}
 	
 	public int constraintTestCol(int col) {
-		col = Util.Clamp(col, 0, 8);
-		int count = 0;
-		var lookup = new[]{false, false, false, false, false, false, false, false, false};
+		var array = this.getCol(col);
+		var count = 0;
+		
 		for (int i = 0; i < 9; i++) {
-			var value = (cells[col, i] - 1);
-			if(value < 0) continue;
-			if (lookup[value]) count++;
-			else lookup[value] = true;
+			var value = array[i];
+			if(value == -1) continue;
+			for (int j = 0; j < 9; j++) {
+				if(j == i) continue;
+				if (value == array[j]) {
+					count++;
+					break;
+				}
+			}
 		}
 
 		return count;
 	}
 	
 	public int constraintTestSquare(int x, int y) {
-		x = Util.Clamp(x, 0, 2);
-		y = Util.Clamp(y, 0, 2);
-
-		int count = 0;
-		var lookup = new[]{false, false, false, false, false, false, false, false, false};
+		var array = this.getSquare(x, y);
+		var count = 0;
 		
-		for (int j = y * 3; j < (y * 3) + 3; j++) {
-			for (int i = x * 3; i < (x * 3) + 3; i++) {
-				var value = (cells[i, j] - 1);
-				if (lookup[value]) count++;
-				else lookup[value] = true;
+		for (int i = 0; i < 9; i++) {
+			var value = array[i];
+			if(value == -1) continue;
+			for (int j = 0; j < 9; j++) {
+				if(j == i) continue;
+				if (value == array[j]) {
+					count++;
+					break;
+				}
 			}
 		}
 
