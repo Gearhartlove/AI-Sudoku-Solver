@@ -8,7 +8,7 @@ namespace AI_Sudoku_Solver
     {
        //Generate Completely Random Board for Population
        private const int popSize = 15;
-       private const double SelectionPercentage = 1.0/3; 
+       private const double SelectionPercentage = 0.20; 
        private Random rand;
        private SudokuPuzzle OriginalPuzzle;
        
@@ -20,10 +20,10 @@ namespace AI_Sudoku_Solver
        {
            rand = new Random();
            OriginalPuzzle = new SudokuPuzzle("Easy-P1.csv"); //TODO Change later for all files implementation
-           SudokuPuzzle[] blankPopulation = new SudokuPuzzle[popSize];
+           List<SudokuPuzzle> blankPopulation = new List<SudokuPuzzle>();
            //Generate Local Population
-           SudokuPuzzle[] randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
-           SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
+           List<SudokuPuzzle> randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
+           //SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
             
            //GenerateRandomBoards()
            //Evaluate()
@@ -39,7 +39,7 @@ namespace AI_Sudoku_Solver
        /// <summary>
        /// Randomizes the initial population
        /// </summary>
-       private SudokuPuzzle[] GenerateRandomBoard(SudokuPuzzle[] population, in SudokuPuzzle original)
+       private List<SudokuPuzzle> GenerateRandomBoard(List<SudokuPuzzle> population, in SudokuPuzzle original)
        {
            for (int i = 0; i < popSize; i++)
            {
@@ -57,8 +57,11 @@ namespace AI_Sudoku_Solver
                            newRandPop.setLockedValue(column, row, newRandPop.getValue(column, row));
                    }
                }
-               population[i] = newRandPop;
+               population.Add(newRandPop);
            }
+           Console.WriteLine(OriginalPuzzle);
+           Console.WriteLine(population[0]);
+           Console.WriteLine(population[1]);
            return population;
        }
 
@@ -89,13 +92,13 @@ namespace AI_Sudoku_Solver
 
        /// <summary>
        /// Survival of the fittest, based on initial selection of population. This is chosen using X. (Still neeed to
-       /// decide)
+       /// decide). Selection Pressure determined by: p*(1-p)^a where p is probability and a is individual's fitness in
+       /// the table
        /// </summary>
-       private SudokuPuzzle Tournament(SudokuPuzzle[] selection)
-       {
-          //even
-          //odd
-       }
+       // private SudokuPuzzle Tournament(List<SudokuPuzzle> selection, double percentage)
+       // {
+       //     
+       // }
        
        /// <summary>
        /// Mutates Population by using the X operation and Y Selection. (Still need to decide on these)
@@ -105,7 +108,11 @@ namespace AI_Sudoku_Solver
            
        }
 
-       
+
+       private void Crossover()
+       {
+           
+       }
        
        /// <summary>
        /// Instantiate GeneticAlgorithm object (calls the constructor) and have a while loop which runs until the

@@ -13,7 +13,6 @@ namespace AI_Sudoku_Solver
     /// </summary>
     public class BoardTemperature
     {
-        float temperature = 0; 
         
         // public static float GetBoardTemp(in SudokuPuzzle board)
         // {
