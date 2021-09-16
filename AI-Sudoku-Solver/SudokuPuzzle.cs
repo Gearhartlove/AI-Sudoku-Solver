@@ -87,7 +87,8 @@ public class SudokuPuzzle {
 		
 		for (int j = y * 3; j < (y * 3) + 3; j++) {
 			for (int i = x * 3; i < (x * 3) + 3; i++) {
-				s[i + j * 3] = cells[i, j];
+				Console.Out.WriteLine(i + " | " + j);
+				s[(i - (x*3))  + ((j - (y*3)) * 3)] = cells[i, j];
 			}
 		}
 
