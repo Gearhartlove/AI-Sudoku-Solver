@@ -23,8 +23,8 @@ namespace AI_Sudoku_Solver
            List<SudokuPuzzle> blankPopulation = new List<SudokuPuzzle>();
            //Generate Local Population
            List<SudokuPuzzle> randomPopulation = GenerateRandomBoard(blankPopulation, in OriginalPuzzle);
-           //SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
-            
+           SudokuPuzzle winner = Tournament(Selection(randomPopulation, SelectionPercentage));
+
            //GenerateRandomBoards()
            //Evaluate()
            //Loop : stop when I have a solved board
@@ -59,9 +59,6 @@ namespace AI_Sudoku_Solver
                }
                population.Add(newRandPop);
            }
-           Console.WriteLine(OriginalPuzzle);
-           Console.WriteLine(population[0]);
-           Console.WriteLine(population[1]);
            return population;
        }
 
@@ -69,10 +66,10 @@ namespace AI_Sudoku_Solver
        /// Randomly Selects a portion of the population to take part in the tournament
        /// Enter the tournament
        /// </summary>
-       private SudokuPuzzle[] Selection(SudokuPuzzle[] boards, double percentage)
+       private SudokuPuzzle[] Selection(List<SudokuPuzzle> boards, double percentage)
        {
            //pick X% of the population of the population
-           int selectPopNumber = (int)Math.Round(boards.Length * percentage);
+           int selectPopNumber = (int)Math.Round(boards.Count * percentage);
            SudokuPuzzle[] selectedPopulation = new SudokuPuzzle[selectPopNumber];
            List<int> randomList = new List<int>();
            int randomNumber = -1;
@@ -81,12 +78,12 @@ namespace AI_Sudoku_Solver
            {
                do
                {
-                   randomNumber = rand.Next(boards.Length);
+                   randomNumber = rand.Next(boards.Count);
                    randomList.Add(randomNumber);
                } while (!randomList.Contains(randomNumber));
                selectedPopulation[i] = boards[randomNumber];
            }
-           
+           Console.WriteLine(selectedPopulation.Length);  
            return selectedPopulation;
        }
 
@@ -95,10 +92,10 @@ namespace AI_Sudoku_Solver
        /// decide). Selection Pressure determined by: p*(1-p)^a where p is probability and a is individual's fitness in
        /// the table
        /// </summary>
-       // private SudokuPuzzle Tournament(List<SudokuPuzzle> selection, double percentage)
-       // {
-       //     
-       // }
+       private SudokuPuzzle Tournament(List<SudokuPuzzle> selection, double percentage)
+       {
+           
+       }
        
        /// <summary>
        /// Mutates Population by using the X operation and Y Selection. (Still need to decide on these)

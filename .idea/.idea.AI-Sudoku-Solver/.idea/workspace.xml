@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="93949e8c-591a-43a8-93dd-f67a804442f1" name="Default Changelist" comment="fixed issue with backtracking branch">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AI-Sudoku-Solver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/BoardTemperature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/GeneticAlgorithm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/bin/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI-Sudoku-Solver.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Sudoku-Solver/obj/Debug/AI_Sudoku_Solver.pdb" afterDir="false" />
     </list>
@@ -133,7 +133,7 @@
       <workItem from="1631403867858" duration="7848000" />
       <workItem from="1631715145996" duration="3078000" />
       <workItem from="1631733823897" duration="7818000" />
-      <workItem from="1631818051698" duration="1673000" />
+      <workItem from="1631818051698" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Added solution to Git">
       <created>1631230506241</created>
