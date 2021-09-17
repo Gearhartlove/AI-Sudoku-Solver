@@ -11,7 +11,7 @@ namespace AI_Sudoku_Solver {
 			t.setValue(1, 1, 4);
 			
 			Console.WriteLine(t);
-			Console.WriteLine(t.constraintTestSquare(0, 0));
+			Console.WriteLine(t.constraintTest());
 			
 //			var solver = new SimpleBacktracking();
 //			Console.Out.WriteLine(solver.solve(t));

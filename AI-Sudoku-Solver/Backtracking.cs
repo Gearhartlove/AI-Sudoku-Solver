@@ -88,8 +88,18 @@ namespace Backtracking {
 		}
 	}
 
-	public class LFBacktracking {
-		
+	public class LFBacktracking : BacktrackingSolver {
+		protected override List<NodeChangeDescription> discover(Node<SudokuPuzzle> parent) {
+			throw new NotImplementedException();
+		}
+
+		protected override bool checkConstraints(SudokuPuzzle puzzle, NodeChangeDescription description) {
+			throw new NotImplementedException();
+		}
+
+		protected override bool checkGoalState(SudokuPuzzle puzzle) {
+			throw new NotImplementedException();
+		}
 	}
 
 	public class ArcBacktracking {

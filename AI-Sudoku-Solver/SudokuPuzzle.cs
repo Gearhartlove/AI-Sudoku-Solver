@@ -205,6 +205,23 @@ public class SudokuPuzzle {
 		return constraintTestSquare((int) Math.Floor((decimal) (x / 3)), (int) Math.Floor((decimal) (y / 3)));
 	}
 
+	public int constraintTest() {
+		int count = 0;
+
+		for (int i = 0; i < 9; i++) {
+			count += constraintTestRow(i);
+			count += constraintTestCol(i);
+		}
+
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				count += constraintTestSquare(i, j);
+			}
+		}
+
+		return count;
+	}
+
 	public int getEmptyCellCount() {
 		return spacesLeft;
 	}
