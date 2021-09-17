@@ -2,9 +2,9 @@ namespace AI_Sudoku_Solver
 {
     public class Population
     {
-        public Population(string file)
+        public Population(SudokuPuzzle puzzle)
         {
-            pop = new SudokuPuzzle(file);
+            pop = puzzle.copy();
         }
         
         public SudokuPuzzle pop;
