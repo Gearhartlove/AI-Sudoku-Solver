@@ -6,10 +6,9 @@ using System.Data.Common;
 //LOG TO OUTPUF FILE 
 //Implement the Interface for Formatting 
 //Make formatting method 
-//
 namespace AI_Sudoku_Solver
 {
-    public class GeneticAlgorithm
+    public class GeneticAlgorithm : IResults
     {
        //Generate Completely Random Board for Population
        private const int PopSize = 100;
@@ -30,6 +29,11 @@ namespace AI_Sudoku_Solver
        {
            rand = new Random();
            blankPopulation = new List<Population>();
+       }
+
+       public void PrintResults()
+       {
+           
        }
        
         /// <summary>
