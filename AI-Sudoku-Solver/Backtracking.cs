@@ -2,12 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Diagnostics;
+using AI_Sudoku_Solver;
 
 namespace Backtracking {
-	public abstract class BacktrackingSolver {
+	public abstract class BacktrackingSolver : IResults, ISolver {
+		
 		
 		private Stopwatch stopwatch = new Stopwatch();
+		protected int backtracks = 0;
+		protected int nodesExplored = 0;
+		
 		public SudokuPuzzle solve(SudokuPuzzle init) {
+			backtracks = 0;
+			nodesExplored = 0;
 			stopwatch.Restart();
 			var r = recurse(new Node<SudokuPuzzle>(init));
 			stopwatch.Stop();
@@ -46,6 +53,10 @@ namespace Backtracking {
 		protected abstract bool checkConstraints(SudokuPuzzle puzzle, NodeChangeDescription description);
 
 		protected abstract bool checkGoalState(SudokuPuzzle puzzle);
+		public string PrintResults() {
+			return "ms: " + stopwatch.ElapsedMilliseconds + " | backtracks: " + backtracks + " | nodes visit: " +
+			       nodesExplored;
+		}
 	}
 
 	public class SimpleBacktracking : BacktrackingSolver {

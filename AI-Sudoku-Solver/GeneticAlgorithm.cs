@@ -31,9 +31,8 @@ namespace AI_Sudoku_Solver
            blankPopulation = new List<Population>();
        }
 
-       public void PrintResults()
-       {
-           
+       public string PrintResults() {
+           return "";
        }
        
         /// <summary>
