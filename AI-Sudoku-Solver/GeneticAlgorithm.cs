@@ -13,10 +13,9 @@ namespace AI_Sudoku_Solver
     {
        //Generate Completely Random Board for Population
        private const int PopSize = 100;
-       private const double SelectionPercentage = 0.15;
-       private const double ProgramCounter = 2000;
-       private const double MutationTicks = 5;
-       //private const double 
+       private const double SelectionPercentage = 0.11;
+       private const double ProgramCounter = 15000;
+       private const double MutationTicks = 2;
        private readonly Random rand;
        private SudokuPuzzle OriginalPuzzle;
        private SudokuPuzzle SolutionPuzzle;
@@ -54,6 +53,7 @@ namespace AI_Sudoku_Solver
             ResultBookkeeping(); //Reset Variables for output
              
             //Solving the Program
+            if (randomPopulation!= null) randomPopulation.Clear(); //reset my random population
             randomPopulation = GenerateRandomBoard(blankPopulation, puzzle);
             Insights(in randomPopulation, ref startPopMean, ref startPopMedian, ref startBestPopulation,
                 ref startWorstPopulation); //calculate insights related to each population's ecosystem
@@ -69,11 +69,13 @@ namespace AI_Sudoku_Solver
                Evaluate(newPopMembers);
                Replace(ref randomPopulation, newPopMembers);
             }
-            Insights(in randomPopulation, ref endPopMean, ref endPopMedian, ref endBestPopulation, ref endWorstPopulation);
+            Insights(in randomPopulation, ref endPopMean, ref endPopMedian, ref endBestPopulation, 
+                ref endWorstPopulation);
             //The Population list is always sorted from worst (index 0) to best (index Count-1)
             //Assigning the solution to the hightest fitness individual (least constraints violated)
             SolutionPuzzle = randomPopulation[randomPopulation.Count-1].pop; //TODO test this 
-            return SolutionPuzzle;
+            if (SolutionPuzzle.constraintTest() == 0) return SolutionPuzzle;
+            else return null;
        }
         
         /// <summary>
@@ -202,7 +204,11 @@ namespace AI_Sudoku_Solver
                {
                    int x = rand.Next(0, 9);
                    int y = rand.Next(0, 9);
-                   child.pop.setValue(x, y, rand.Next(1, 10));
+                   if (child.pop.isLocked(x, y)) m -= 1; //if cell is a given start cell, mutate again 
+                   else
+                   {
+                       child.pop.setValue(x, y, rand.Next(1, 10));
+                   }
                }
 
            }
