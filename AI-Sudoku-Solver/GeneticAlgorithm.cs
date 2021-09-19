@@ -235,7 +235,7 @@ namespace AI_Sudoku_Solver
           random_pop.Add(adding_pop[1]);
        }
 
-        public string trace() {
+        public string traceWriter() {
             return "";
         }
 

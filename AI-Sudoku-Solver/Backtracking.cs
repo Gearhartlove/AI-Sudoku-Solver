@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
 using AI_Sudoku_Solver;
 
 namespace Backtracking {
@@ -11,12 +13,12 @@ namespace Backtracking {
 		private Stopwatch stopwatch = new Stopwatch();
 		protected long backtracks = 0;
 		protected long nodesExplored = 0;
-		protected string traceString = "";
+		private StringBuilder traceBuilder = new StringBuilder();
 		
 		public SudokuPuzzle solve(SudokuPuzzle init) {
 			backtracks = 0;
 			nodesExplored = 0;
-			traceString = "";
+			traceBuilder.Clear();
 			
 			log("       Start Algorithm       ");
 			log("-----------------------------");
@@ -38,10 +40,11 @@ namespace Backtracking {
 		
 		private SudokuPuzzle recurse(Node<SudokuPuzzle> currentNode) {
 			nodesExplored++;
-			
 			var puzzle = currentNode.getValue();
 			if (checkGoalState(puzzle)) return puzzle;
 
+			log("Node Selected (" + currentNode.getPath() + ")");
+			
 			var possibleChildren = discover(currentNode);
 			if (possibleChildren == null || possibleChildren.Count == 0) {
 				log("");
@@ -54,12 +57,11 @@ namespace Backtracking {
 
 			foreach (var child in possibleChildren) {
 				if (checkConstraints(puzzle, child)) {
-					log("Node Selected");
-					log(child.ToString());
+					log("  Possible Move " + child + " | Constraint Test: PASSED");
 					var modifiedPuzzle = puzzle.copy();
 					modifiedPuzzle.setValue(child.x, child.y, child.value);
 					
-					log(puzzle.ToString());
+//					log(puzzle.ToString());
 					log("            |            ");
 					log("            |            ");
 					log("            V            ");
@@ -69,9 +71,15 @@ namespace Backtracking {
 					var next = currentNode.createChild(modifiedPuzzle);
 					var value  = recurse(next);
 					if (value != null) return value;
+				} else {
+					log("  Possible Move " + child + " | Constraint Test: FAILED");
 				}
 			}
 			
+			log("");
+			log("  No Valid Children Discovered");
+			log("       !!BACKTRACKING!!");
+			log("");
 			backtracks++;
 			return null;
 		}
@@ -88,12 +96,12 @@ namespace Backtracking {
 
 		public abstract string solverName();
 
-		public string trace() {
-			return traceString;
+		public string traceWriter() {
+			return traceBuilder.ToString();
 		}
 
 		protected void log(string message) {
-			traceString += message + "\n";
+			traceBuilder.AppendLine(message);
 		}
 	}
 
@@ -160,18 +168,18 @@ namespace Backtracking {
 			
 			List<NodeChangeDescription> list = new List<NodeChangeDescription>();
 			for (int i = 1; i < 10; i++) {
-				list.Add(new NodeChangeDescription(xt, yt, i));
+				if(puzzle.isLegalMove(xt, yt, i)) list.Add(new NodeChangeDescription(xt, yt, i));
 			}
 
 			return list;
 		}
 
 		protected override bool checkConstraints(SudokuPuzzle puzzle, NodeChangeDescription description) {
-			throw new NotImplementedException();
+			return true;
 		}
 
 		protected override bool checkGoalState(SudokuPuzzle puzzle) {
-			throw new NotImplementedException();
+			return puzzle.getEmptyCellCount() == 0;
 		}
 
 		public override string solverName() {

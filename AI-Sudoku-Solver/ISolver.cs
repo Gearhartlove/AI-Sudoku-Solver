@@ -1,9 +1,11 @@
-﻿namespace AI_Sudoku_Solver
+﻿using System.IO;
+
+namespace AI_Sudoku_Solver
 {
     public interface ISolver {
         SudokuPuzzle solve(SudokuPuzzle puzzle);
 
-        string trace();
+        string traceWriter();
 
         string result();
 

@@ -33,7 +33,7 @@ namespace AI_Sudoku_Solver {
                     var solvedString = solvedPuzzle != null ? "SOLVED" : "UNSOLVED";
                     log("    (" + solver.solverName() + ") - " + solvedString + " | " + solver.result());
                     
-                    File.WriteAllText(path + "/traces.txt", solver.trace());
+                    File.WriteAllText(path + "/traces.txt", solver.traceWriter());
                     if(solvedPuzzle != null) File.WriteAllText(path + "/solution.txt", solvedPuzzle.toOutputString());
                 }
                 log("");

@@ -22,6 +22,10 @@ public class Node<T>
         return depth;
     }
 
+    public string getPath() {
+        return path;
+    }
+
     private Node(T value, string path, int depth) {
         this.value = value;
         this.path = path;
