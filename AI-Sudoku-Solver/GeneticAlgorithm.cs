@@ -8,7 +8,7 @@ using System.Data.Common;
 //Make formatting method 
 namespace AI_Sudoku_Solver
 {
-    public class GeneticAlgorithm : IResults, ISolver
+    public class GeneticAlgorithm : ISolver
     {
        //Generate Completely Random Board for Population
        private const int PopSize = 100;
@@ -31,10 +31,6 @@ namespace AI_Sudoku_Solver
            blankPopulation = new List<Population>();
        }
 
-       public string PrintResults() {
-           return "";
-       }
-
        public SudokuPuzzle solve()
        {
            return SolutionPuzzle;
@@ -45,7 +41,7 @@ namespace AI_Sudoku_Solver
         /// the program, including the Selection, Tournament, Crossover, Mutate, Evaluate, and Replace methods.
         /// </summary>
         /// <param name="puzzle"></param>
-       public  void solve(SudokuPuzzle puzzle)
+       public SudokuPuzzle solve(SudokuPuzzle puzzle)
        {
            randomPopulation = GenerateRandomBoard(blankPopulation, puzzle);
            
@@ -60,6 +56,8 @@ namespace AI_Sudoku_Solver
                Evaluate(newPopMembers);
                Replace(ref randomPopulation, newPopMembers);
            }
+
+           return null;
        }
         
         /// <summary>
@@ -239,6 +237,14 @@ namespace AI_Sudoku_Solver
 
         public string trace() {
             return "";
+        }
+
+        public string result() {
+            throw new NotImplementedException();
+        }
+
+        public string solverName() {
+            return "Genetic Search";
         }
     }
 }

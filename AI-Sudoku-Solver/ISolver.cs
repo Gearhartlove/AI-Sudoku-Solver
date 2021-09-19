@@ -1,11 +1,12 @@
 ﻿namespace AI_Sudoku_Solver
 {
-    public interface ISolver
-    {
-
+    public interface ISolver {
         SudokuPuzzle solve(SudokuPuzzle puzzle);
 
-
         string trace();
+
+        string result();
+
+        string solverName();
     }
 }

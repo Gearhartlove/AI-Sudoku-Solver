@@ -234,6 +234,10 @@ public class SudokuPuzzle {
 		return new SudokuPuzzle(cells.Clone() as int[,], lockedCells.Clone() as bool[,], spacesLeft);
 	}
 
+	public int[,] getCells() {
+		return cells;
+	}
+
 	private void fromFile(string filename) {
 		string[] lines = File.ReadAllLines(filename);
 

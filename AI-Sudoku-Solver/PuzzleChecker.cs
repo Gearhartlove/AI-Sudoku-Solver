@@ -3,10 +3,9 @@ using System.Linq;
 
 namespace AI_Sudoku_Solver
 {
-    class PuzzleChecker
-    {
+    class PuzzleChecker {
         // Takes in a 9x9 puzzle array and checks if it's valid.
-        public void CheckPuzzle(int[][] _puzzle)
+        public void CheckPuzzle(int[,]_puzzle)
         {
             Console.WriteLine("Starting puzzle check");
 
@@ -17,8 +16,8 @@ namespace AI_Sudoku_Solver
                 int rowSum = 0;
                 for (int col = 0; col < 9; col++)
                 {
-                    rowSum += _puzzle[row][col];
-                    currentRow[col] = _puzzle[row][col];
+                    rowSum += _puzzle[row, col];
+                    currentRow[col] = _puzzle[row, col];
                 }
 
                 if (!CheckDuplicates(currentRow))
@@ -35,8 +34,8 @@ namespace AI_Sudoku_Solver
                 int columnSum = 0;
                 for (int row = 0; row < 9; row++)
                 {
-                    columnSum += _puzzle[row][col];
-                    currentColumn[row] = _puzzle[row][col];
+                    columnSum += _puzzle[row, col];
+                    currentColumn[row] = _puzzle[row, col];
                 }
 
                 if (!CheckDuplicates(currentColumn))
@@ -59,8 +58,8 @@ namespace AI_Sudoku_Solver
                         {
                             int currentRow = (3 * i) + x;
                             int currentColumn = (3 * j) + y;
-                            boxSum += _puzzle[currentRow][currentColumn];
-                            currentBox[y] = _puzzle[currentRow][currentColumn];
+                            boxSum += _puzzle[currentRow, currentColumn];
+                            currentBox[y] = _puzzle[currentRow, currentColumn];
                         }
                     }
 
