@@ -3,9 +3,12 @@ using System.Linq;
 
 namespace AI_Sudoku_Solver
 {
-    class PuzzleChecker {
+    class PuzzleChecker
+    {
+        bool isValidPuzzle = false;
+
         // Takes in a 9x9 puzzle array and checks if it's valid.
-        public void CheckPuzzle(int[,]_puzzle)
+        public bool CheckPuzzle(int[,]_puzzle)
         {
             Console.WriteLine("Starting puzzle check");
 
@@ -21,10 +24,14 @@ namespace AI_Sudoku_Solver
                 }
 
                 if (!CheckDuplicates(currentRow))
-                    Console.WriteLine("Duplicate number found in row.");
+                    isValidPuzzle = false;
+                else
+                    isValidPuzzle = true;
 
                 if (rowSum != 45)
-                    Console.WriteLine("Row sum failed.");
+                    isValidPuzzle = false;
+                else
+                    isValidPuzzle = true;
             }
 
             // Loop through each column and verify it adds to 45.
@@ -39,10 +46,14 @@ namespace AI_Sudoku_Solver
                 }
 
                 if (!CheckDuplicates(currentColumn))
-                    Console.WriteLine("Duplicate number found in column.");
+                    isValidPuzzle = false;
+                else
+                    isValidPuzzle = true;
 
                 if (columnSum != 45)
-                    Console.WriteLine("Column sum failed.");
+                    isValidPuzzle = false;
+                else
+                    isValidPuzzle = true;
             }
 
             // Loops through each larger 3x3 cell, then through the smaller 3x3 cells to verify each sum is 45.
@@ -64,13 +75,19 @@ namespace AI_Sudoku_Solver
                     }
 
                     if (!CheckDuplicates(currentBox))
-                        Console.WriteLine("Duplicate number found in box.");
+                        isValidPuzzle = false;
+                    else
+                        isValidPuzzle = true;
 
                     if (boxSum != 45)
-                        Console.WriteLine("Box sum failed.");
+                        isValidPuzzle = false;
+                    else
+                        isValidPuzzle = true;
                 }
             }
             Console.WriteLine("Ending puzzle check");
+
+            return isValidPuzzle;
         }
 
         bool CheckDuplicates(int[] _array)

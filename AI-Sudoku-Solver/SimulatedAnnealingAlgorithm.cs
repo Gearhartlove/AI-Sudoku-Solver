@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AI_Sudoku_Solver
 {
-    class SimulatedAnnealingAlgorithm
+    class SimulatedAnnealingAlgorithm : ISolver
     {
         Random rand = new Random();
         int maximumRuns = 50;
@@ -98,15 +98,11 @@ namespace AI_Sudoku_Solver
                 FindValidSwap(_puzzle, x, y);
 
                 double deltaScore = Score(currentPuzzle) - Score(_puzzle);
-                double acceptScore = Math.Exp(-deltaScore / temperature) - 1;
+                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 - rand.NextDouble();
 
-                //Console.WriteLine(acceptScore);
                 if (acceptScore > 0)
                     _puzzle = currentPuzzle.copy();
 
-                //Console.WriteLine("dScore " + deltaScore);
-                //Console.WriteLine(currentPuzzle.toOutputString());
-                //Console.WriteLine(_puzzle.toOutputString());
                 Console.WriteLine("" + Score(_puzzle));
             }
         }
@@ -171,6 +167,27 @@ namespace AI_Sudoku_Solver
         {
             int score = _puzzle.constraintTest();
             return score;
+        }
+
+        public SudokuPuzzle solve(SudokuPuzzle _puzzle)
+        {
+            SudokuPuzzle solution = LocalSearchSimulatedAnnealing(_puzzle);
+            return solution;
+        }
+
+        public string traceWriter()
+        {
+            return "";
+        }
+
+        public string result()
+        {
+            return "";
+        }
+
+        public string solverName()
+        {
+            return "Simmulated Annealing Local Search";
         }
     }
 }
