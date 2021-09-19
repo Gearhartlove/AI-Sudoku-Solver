@@ -23,7 +23,7 @@ namespace AI_Sudoku_Solver {
                 log(Path.GetFileName(file) + ":");
                 foreach (var solver in solvers) {
                     var solvedPuzzle = solver.solve(puzzle);
-                    //var checkedResult = checker.CheckPuzzle(solvedPuzzle.getCells());
+                    var checkedResult = checker.CheckPuzzle(solvedPuzzle.getCells());
                     string path = folderOut + "/" +
                                   stringToFilename(solver.solverName().ToLower()) + "/"
                                   + Path.GetFileNameWithoutExtension(file);
@@ -31,7 +31,8 @@ namespace AI_Sudoku_Solver {
                     Directory.CreateDirectory(path);
 
                     var solvedString = solvedPuzzle != null ? "SOLVED" : "UNSOLVED";
-                    log("    (" + solver.solverName() + ") - " + solvedString + " | " + solver.result());
+                    var checkedString = checkedResult ? "PASSED" : "FAILED";
+                    log("    (" + solver.solverName() + ") - " + solvedString + " (Checker) - " + checkedString +  " | " + solver.result());
                     
                     File.WriteAllText(path + "/traces.txt", solver.traceWriter());
                     if(solvedPuzzle != null) File.WriteAllText(path + "/solution.txt", solvedPuzzle.toOutputString());

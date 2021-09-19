@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 public class SudokuPuzzle {
@@ -203,6 +204,23 @@ public class SudokuPuzzle {
 	
 	public int constraintTestSquareXY(int x, int y) {
 		return constraintTestSquare((int) Math.Floor((decimal) (x / 3)), (int) Math.Floor((decimal) (y / 3)));
+	}
+
+	public int[] getDomain(int x, int y) {
+		var row = getRow(y);
+		var col = getCol(x);
+		var square = getSquareXY(x, y);
+
+		List<int> domain = new List<int>();
+		domain.AddRange(new []{1, 2, 3, 4, 5, 6, 7, 8, 9});
+
+		for (var i = 0; i < 9; i++) {
+			domain.Remove(row[i]);
+			domain.Remove(col[i]);
+			domain.Remove(square[i]);
+		}
+
+		return domain.ToArray();
 	}
 
 	public int constraintTest() {
