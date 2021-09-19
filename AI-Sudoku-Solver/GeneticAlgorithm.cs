@@ -45,7 +45,7 @@ namespace AI_Sudoku_Solver
         /// the program, including the Selection, Tournament, Crossover, Mutate, Evaluate, and Replace methods.
         /// </summary>
         /// <param name="puzzle"></param>
-       public  void Solve(SudokuPuzzle puzzle)
+       public  void solve(SudokuPuzzle puzzle)
        {
            randomPopulation = GenerateRandomBoard(blankPopulation, puzzle);
            
@@ -236,5 +236,9 @@ namespace AI_Sudoku_Solver
           random_pop.Add(adding_pop[0]);
           random_pop.Add(adding_pop[1]);
        }
+
+        public string trace() {
+            return "";
+        }
     }
 }

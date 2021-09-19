@@ -5,5 +5,7 @@
 
         SudokuPuzzle solve(SudokuPuzzle puzzle);
 
+
+        string trace();
     }
 }

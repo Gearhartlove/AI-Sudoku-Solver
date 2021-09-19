@@ -235,7 +235,7 @@ public class SudokuPuzzle {
 	}
 
 	private void fromFile(string filename) {
-		string[] lines = File.ReadAllLines("./puzzles/" + filename);
+		string[] lines = File.ReadAllLines(filename);
 
 		int x = 0, y = 0;
 		foreach (var line in lines) {

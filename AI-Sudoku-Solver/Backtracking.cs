@@ -11,14 +11,20 @@ namespace Backtracking {
 		private Stopwatch stopwatch = new Stopwatch();
 		protected int backtracks = 0;
 		protected int nodesExplored = 0;
+		protected string traceString = "";
 		
 		public SudokuPuzzle solve(SudokuPuzzle init) {
 			backtracks = 0;
 			nodesExplored = 0;
+			traceString = "";
 			stopwatch.Restart();
 			var r = recurse(new Node<SudokuPuzzle>(init));
 			stopwatch.Stop();
 			return r;
+		}
+
+		public string trace() {
+			return traceString;
 		}
 
 
@@ -27,13 +33,16 @@ namespace Backtracking {
 		}
 		
 		private SudokuPuzzle recurse(Node<SudokuPuzzle> currentNode) {
-			//Console.Out.WriteLine(currentNode.getValue());
+			nodesExplored++;
 			
 			var puzzle = currentNode.getValue();
 			if (checkGoalState(puzzle)) return puzzle;
 
 			var possibleChildren = discover(currentNode);
-			if (possibleChildren == null || possibleChildren.Count == 0) return null;
+			if (possibleChildren == null || possibleChildren.Count == 0) {
+				backtracks++;
+				return null;
+			}
 
 			foreach (var child in possibleChildren) {
 				if (checkConstraints(puzzle, child)) {
@@ -45,6 +54,7 @@ namespace Backtracking {
 				}
 			}
 
+			backtracks++;
 			return null;
 		}
 
