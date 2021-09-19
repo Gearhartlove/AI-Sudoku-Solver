@@ -8,7 +8,7 @@ using System.Data.Common;
 //Make formatting method 
 namespace AI_Sudoku_Solver
 {
-    public class GeneticAlgorithm : IResults
+    public class GeneticAlgorithm : IResults, ISolver
     {
        //Generate Completely Random Board for Population
        private const int PopSize = 100;
@@ -33,6 +33,11 @@ namespace AI_Sudoku_Solver
 
        public string PrintResults() {
            return "";
+       }
+
+       public SudokuPuzzle solve()
+       {
+           return SolutionPuzzle;
        }
        
         /// <summary>
