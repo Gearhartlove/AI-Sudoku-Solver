@@ -99,6 +99,13 @@ namespace AI_Sudoku_Solver
         {
             for (int i = 0; i < maximumRuns; i++)
             {
+                //Tracing information  
+                Log("");
+                Log("Run Number: " + i); 
+                Log(_puzzle.ToString()); 
+                Log(""); 
+                Log("-----------------------------------------------------------");
+                
                 temperature = (temperature * coolingMultiplier);
                 int x = rand.Next(0, 3);
                 int y = rand.Next(0, 3);
@@ -184,12 +191,6 @@ namespace AI_Sudoku_Solver
         public SudokuPuzzle solve(SudokuPuzzle _puzzle)
         {
             traceBuilder.Clear();
-            Log("       Starting Local Search Simmulated Annealing       ");
-            Log("-----------------------------");
-            Log("");
-            Log("Starting Puzzle State:");
-            Log(_puzzle.toOutputString());
-            Log("");
 
             stopwatch.Restart();
             SudokuPuzzle solution = LocalSearchSimulatedAnnealing(_puzzle);
