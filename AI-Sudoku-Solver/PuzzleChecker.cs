@@ -10,7 +10,7 @@ namespace AI_Sudoku_Solver
         // Takes in a 9x9 puzzle array and checks if it's valid.
         public bool CheckPuzzle(int[,]_puzzle)
         {
-            Console.WriteLine("Starting puzzle check");
+            //Console.WriteLine("Starting puzzle check");
 
             // Loop through each row and verify it adds to 45
             for (int row = 0; row < 9; row++)
@@ -85,7 +85,7 @@ namespace AI_Sudoku_Solver
                         isValidPuzzle = true;
                 }
             }
-            Console.WriteLine("Ending puzzle check");
+            //Console.WriteLine("Ending puzzle check");
 
             return isValidPuzzle;
         }
