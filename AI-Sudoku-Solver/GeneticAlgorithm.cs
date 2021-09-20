@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 
 //LOG TO OUTPUF FILE 
 //Implement the Interface for Formatting 
@@ -66,6 +67,7 @@ namespace AI_Sudoku_Solver
                crossoverParents.Add(Tournament(Selection(randomPopulation, SelectionPercentage)));
                var newPopMembers= Crossover(in crossoverParents, puzzle);
                Mutate(ref newPopMembers);
+               Tracing(in crossoverParents, in newPopMembers);
                Evaluate(newPopMembers);
                Replace(ref randomPopulation, newPopMembers);
             }
@@ -290,6 +292,28 @@ namespace AI_Sudoku_Solver
                 //best
                 best = randPopulation[randPopulation.Count - 1].constraints_violated;
         }
+
+        public void Tracing(in List<Population> parents, in List<Population> children)
+        {
+            log("Parents:");
+            //tracing parents
+            foreach (Population p in parents)
+            {
+                log(p.pop.ToString());
+                log("");
+            }
+            log(""); 
+            log("Children:");
+            //tracing children
+            foreach (Population p in children)
+            {
+                log(p.pop.ToString());
+                log("");
+            }
+
+            log("");
+            log("-------------------------------------------------------------------------------");
+        }
         
         public string traceWriter()
         {
@@ -303,9 +327,9 @@ namespace AI_Sudoku_Solver
 
         public string result()
         {
-            return "\n    (Constraints violated by the population)\n    START worst: " + startWorstPopulation
+            return "\n    \t(Constraints violated by the population)\n    \tSTART worst: " + startWorstPopulation
                 + " best: " + startBestPopulation + " mean: " + startPopMean + " median: " + startPopMedian +
-                "\n    END   worst: " + endWorstPopulation + " best: " + endBestPopulation + " mean: " + endPopMean + 
+                "\n    \tEND   worst: " + endWorstPopulation + " best: " + endBestPopulation + " mean: " + endPopMean + 
                 " median: " + endPopMedian;
 
 

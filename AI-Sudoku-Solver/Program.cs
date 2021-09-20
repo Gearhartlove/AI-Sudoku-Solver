@@ -8,7 +8,8 @@ namespace AI_Sudoku_Solver {
 			trial.runTrail("puzzles", "output", 
 			               new SimpleBacktracking(), 
 			               new LFBacktracking(), 
-			               new ArcBacktracking());
+			               new ArcBacktracking(),
+			               new GeneticAlgorithm());
 		}
 	}
 }
