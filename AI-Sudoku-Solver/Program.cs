@@ -9,7 +9,8 @@ namespace AI_Sudoku_Solver {
 			               new SimpleBacktracking(), 
 			               new LFBacktracking(), 
 			               new ArcBacktracking(),
-			               new GeneticAlgorithm());
+			               new GeneticAlgorithm(),
+			               new SimulatedAnnealingAlgorithm());
 		}
 	}
 }

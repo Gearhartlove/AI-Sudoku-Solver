@@ -15,6 +15,7 @@ namespace AI_Sudoku_Solver
         double coolingMultiplier = 0.9999;
         int scoreFinal;
         int initialScore;
+        private PuzzleChecker checker = new PuzzleChecker();
 
         public SudokuPuzzle LocalSearchSimulatedAnnealing(SudokuPuzzle _puzzle)
         {
@@ -193,7 +194,11 @@ namespace AI_Sudoku_Solver
             stopwatch.Restart();
             SudokuPuzzle solution = LocalSearchSimulatedAnnealing(_puzzle);
             stopwatch.Stop();
-            return solution;
+            if (solution.constraintTest() == 0)
+            {
+                return solution;
+            }
+            return null;
         }
 
         public long GetElapsedTimeMili()
