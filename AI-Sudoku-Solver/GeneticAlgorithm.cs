@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
 using System.Data.Common;
 
@@ -13,27 +12,16 @@ namespace AI_Sudoku_Solver
     {
        //Generate Completely Random Board for Population
        private const int PopSize = 100;
-       private const double SelectionPercentage = 0.11;
-       private const double ProgramCounter = 15000;
-       private const double MutationTicks = 2;
+       private const double SelectionPercentage = 0.15;
+       private const double ProgramCounter = 2000;
+       private const double MutationTicks = 5;
+       //private const double 
        private readonly Random rand;
        private SudokuPuzzle OriginalPuzzle;
        private SudokuPuzzle SolutionPuzzle;
        private List<Population> blankPopulation;
        private List<Population> randomPopulation;
-       //for results / insights from each Sudoku puzzle file
-       private StringBuilder traceBuilder = new StringBuilder();
-       private int startWorstPopulation = 0;
-       private int startBestPopulation = 0;
-       private int endWorstPopulation = 0;
-       private int endBestPopulation = 0;
-       private double startPopMean = 0;
-       private double startPopMode = 0;
-       private double startPopMedian = 0;
-       private double endPopMean = 0;
-       private double endPopMode = 0;
-       private double endPopMedian = 0;
-        
+
        /// <summary>
        /// Constructor for instantiating variables
        /// </summary>
@@ -43,23 +31,22 @@ namespace AI_Sudoku_Solver
            blankPopulation = new List<Population>();
        }
 
+       public SudokuPuzzle solve()
+       {
+           return SolutionPuzzle;
+       }
+       
         /// <summary>
         /// Attempts to solve the sudoku puzzle within {ProgramCounter} attempts. Runs and orchestrates the entirety of
         /// the program, including the Selection, Tournament, Crossover, Mutate, Evaluate, and Replace methods.
         /// </summary>
         /// <param name="puzzle"></param>
        public SudokuPuzzle solve(SudokuPuzzle puzzle)
-        {
-            ResultBookkeeping(); //Reset Variables for output
-             
-            //Solving the Program
-            if (randomPopulation!= null) randomPopulation.Clear(); //reset my random population
-            randomPopulation = GenerateRandomBoard(blankPopulation, puzzle);
-            Insights(in randomPopulation, ref startPopMean, ref startPopMedian, ref startBestPopulation,
-                ref startWorstPopulation); //calculate insights related to each population's ecosystem
-            
-            for (int loops = 0; loops < ProgramCounter; loops++)
-            { 
+       {
+           randomPopulation = GenerateRandomBoard(blankPopulation, puzzle);
+           
+           for (int loops = 0; loops < ProgramCounter; loops++)
+           { 
                List<Population> crossoverParents = new List<Population>(); 
                //Select Two Winners of the tournament, from a random selection of the population
                crossoverParents.Add(Tournament(Selection(randomPopulation, SelectionPercentage)));
@@ -68,14 +55,9 @@ namespace AI_Sudoku_Solver
                Mutate(ref newPopMembers);
                Evaluate(newPopMembers);
                Replace(ref randomPopulation, newPopMembers);
-            }
-            Insights(in randomPopulation, ref endPopMean, ref endPopMedian, ref endBestPopulation, 
-                ref endWorstPopulation);
-            //The Population list is always sorted from worst (index 0) to best (index Count-1)
-            //Assigning the solution to the hightest fitness individual (least constraints violated)
-            SolutionPuzzle = randomPopulation[randomPopulation.Count-1].pop; //TODO test this 
-            if (SolutionPuzzle.constraintTest() == 0) return SolutionPuzzle;
-            else return null;
+           }
+
+           return null;
        }
         
         /// <summary>
@@ -204,11 +186,7 @@ namespace AI_Sudoku_Solver
                {
                    int x = rand.Next(0, 9);
                    int y = rand.Next(0, 9);
-                   if (child.pop.isLocked(x, y)) m -= 1; //if cell is a given start cell, mutate again 
-                   else
-                   {
-                       child.pop.setValue(x, y, rand.Next(1, 10));
-                   }
+                   child.pop.setValue(x, y, rand.Next(1, 10));
                }
 
            }
@@ -227,6 +205,8 @@ namespace AI_Sudoku_Solver
            cross_children[0].constraints_violated = cross_children[0].pop.constraintTest();
            cross_children[1].constraints_violated = cross_children[1].pop.constraintTest();
 
+           Console.WriteLine(cross_children[0].constraints_violated);
+           Console.WriteLine(cross_children[1].constraints_violated);
            if (cross_children[0].constraints_violated == 0)
            {
                SolutionPuzzle = cross_children[0].pop;
@@ -247,72 +227,24 @@ namespace AI_Sudoku_Solver
         /// <param name="random_pop"></param>
         /// <param name="adding_pop"></param>
        private void Replace(ref List<Population> random_pop, List<Population> adding_pop)
-        {
-           //sort by evaluation, remove the worst two pop, then add the newest two pop
-           random_pop.RemoveAt(0);
-           random_pop.RemoveAt(1);
-           random_pop.Add(adding_pop[0]);
-           random_pop.Add(adding_pop[1]);
-           //sort the population
-           random_pop.Sort((x,y)=>x.constraints_violated.CompareTo(y.constraints_violated)); 
-           random_pop.Reverse(); //worst --> best sort
-        }
-        
-        private void ResultBookkeeping()
-        {
-            startWorstPopulation = 0;
-            startBestPopulation = 0;
-            endWorstPopulation = 0;
-            endBestPopulation = 0;
-            startPopMean = 0;
-            startPopMode = 0;
-            startPopMedian = 0;
-            endPopMean = 0;
-            endPopMode = 0;
-            endPopMedian = 0;
-            traceBuilder.Clear();
+       {
+          //sort by evaluation, remove the worst two pop, then add the newest two pop
+          random_pop.RemoveAt(0);
+          random_pop.RemoveAt(1);
+          random_pop.Add(adding_pop[0]);
+          random_pop.Add(adding_pop[1]);
+       }
+
+        public string traceWriter() {
+            return "";
         }
 
-        private void Insights(in List<Population> randPopulation, ref double mean, ref double median, ref int best, 
-            ref int worst)
-        {
-                //mean
-                int sum = 0;
-                foreach (Population p in randPopulation)
-                {
-                    sum += p.constraints_violated;
-                }
-                mean = (sum / (double)PopSize);
-                //median
-                median = randPopulation[randomPopulation.Count / 2].constraints_violated;
-                //worst
-                worst = randPopulation[0].constraints_violated;
-                //best
-                best = randPopulation[randPopulation.Count - 1].constraints_violated;
-        }
-        
-        public string traceWriter()
-        {
-            return traceBuilder.ToString();
-        }
-
-        public void log(string mesesage)
-        {
-            traceBuilder.AppendLine(mesesage);
-        }
-
-        public string result()
-        {
-            return "\n    (Constraints violated by the population)\n    START worst: " + startWorstPopulation
-                + " best: " + startBestPopulation + " mean: " + startPopMean + " median: " + startPopMedian +
-                "\n    END   worst: " + endWorstPopulation + " best: " + endBestPopulation + " mean: " + endPopMean + 
-                " median: " + endPopMedian;
-
-
+        public string result() {
+            throw new NotImplementedException();
         }
 
         public string solverName() {
-            return "Genetic Local Search";
+            return "Genetic Search";
         }
     }
 }
