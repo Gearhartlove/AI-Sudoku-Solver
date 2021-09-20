@@ -1,14 +1,20 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
+using System.Text;
 
 namespace AI_Sudoku_Solver
 {
     class SimulatedAnnealingAlgorithm : ISolver
     {
+        Stopwatch stopwatch = new Stopwatch();
+        StringBuilder traceBuilder = new StringBuilder();
         Random rand = new Random();
-        int maximumRuns = 50;
+        int maximumRuns = 1000;
         double temperature = 1000;
         double coolingMultiplier = 0.9999;
+        int scoreFinal;
+        int initialScore;
 
         public SudokuPuzzle LocalSearchSimulatedAnnealing(SudokuPuzzle _puzzle)
         {
@@ -28,8 +34,9 @@ namespace AI_Sudoku_Solver
                 }
             }
 
-            Console.WriteLine(_puzzle.toOutputString());
-            Console.WriteLine("" + Score(_puzzle));
+            //Console.WriteLine(_puzzle.toOutputString());
+            //Console.WriteLine("" + Score(_puzzle));
+            initialScore = Score(_puzzle);
             Swap(_puzzle);
             return _puzzle;
         }
@@ -98,12 +105,15 @@ namespace AI_Sudoku_Solver
                 FindValidSwap(_puzzle, x, y);
 
                 double deltaScore = Score(currentPuzzle) - Score(_puzzle);
-                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 - rand.NextDouble();
+                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 /*- rand.NextDouble()*/;
+
+                //Console.WriteLine("Accept Score: " + acceptScore);
 
                 if (acceptScore > 0)
                     _puzzle = currentPuzzle.copy();
 
-                Console.WriteLine("" + Score(_puzzle));
+                //Console.WriteLine("" + Score(_puzzle));
+                Score(_puzzle);
             }
         }
 
@@ -166,23 +176,44 @@ namespace AI_Sudoku_Solver
         int Score(SudokuPuzzle _puzzle)
         {
             int score = _puzzle.constraintTest();
+            scoreFinal = score;
             return score;
         }
 
         public SudokuPuzzle solve(SudokuPuzzle _puzzle)
         {
+            traceBuilder.Clear();
+            Log("       Starting Local Search Simmulated Annealing       ");
+            Log("-----------------------------");
+            Log("");
+            Log("Starting Puzzle State:");
+            Log(_puzzle.toOutputString());
+            Log("");
+
+            stopwatch.Restart();
             SudokuPuzzle solution = LocalSearchSimulatedAnnealing(_puzzle);
+            stopwatch.Stop();
             return solution;
+        }
+
+        public long GetElapsedTimeMili()
+        {
+            return stopwatch.ElapsedMilliseconds;
+        }
+
+        protected void Log(string message)
+        {
+            traceBuilder.AppendLine(message);
         }
 
         public string traceWriter()
         {
-            return "";
+            return traceBuilder.ToString();
         }
 
         public string result()
         {
-            return "";
+            return "ms: " + stopwatch.ElapsedMilliseconds + " | Starting Puzzle Violation Score " + initialScore + " Final Puzzle Violation Score: " + scoreFinal;
         }
 
         public string solverName()
