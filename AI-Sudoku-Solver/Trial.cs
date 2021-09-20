@@ -23,7 +23,7 @@ namespace AI_Sudoku_Solver {
                 log(Path.GetFileName(file) + ":");
                 foreach (var solver in solvers) {
                     var solvedPuzzle = solver.solve(puzzle);
-                    var checkedResult = checker.CheckPuzzle(solvedPuzzle.getCells());
+                    var checkedResult = solvedPuzzle != null && checker.CheckPuzzle(solvedPuzzle.getCells());
                     string path = folderOut + "/" +
                                   stringToFilename(solver.solverName().ToLower()) + "/"
                                   + Path.GetFileNameWithoutExtension(file);

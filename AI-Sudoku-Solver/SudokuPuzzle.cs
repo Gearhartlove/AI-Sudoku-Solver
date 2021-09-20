@@ -61,43 +61,20 @@ public class SudokuPuzzle {
 	}
 
 	public int[] getRow(int row) {
-		row = Util.Clamp(row, 0, 8);
-		var r = new int[9];
-		for (int i = 0; i < 9; i++) {
-			r[i] = cells[i, row];
-		}
-
-		return r;
+		return Util.getRow(cells, row);
 	}
 	
 	public int[] getCol(int col) {
-		col = Util.Clamp(col, 0, 8);
-		var c = new int[9];
-		for (int i = 0; i < 9; i++) {
-			c[i] = cells[col, i];
-		}
-
-		return c;
+		return Util.getCol(cells, col);
 	}
 
 	public int[] getSquare(int x, int y) {
-		x = Util.Clamp(x, 0, 2);
-		y = Util.Clamp(y, 0, 2);
-
-		var s = new int[9];
-		
-		for (int j = y * 3; j < (y * 3) + 3; j++) {
-			for (int i = x * 3; i < (x * 3) + 3; i++) {
-				s[(i - (x*3))  + ((j - (y*3)) * 3)] = cells[i, j];
-			}
-		}
-
-		return s;
+		return Util.getSquare(cells, x, y);
 	}
 	
 	
 	public int[] getSquareXY(int x, int y) {
-		return getSquare((int) Math.Floor((decimal) (x / 3)), (int) Math.Floor((decimal) (y / 3)));
+		return Util.getSquareXY(cells, (int) Math.Floor((decimal) (x / 3)), (int) Math.Floor((decimal) (y / 3)));
 	}
 
 	public bool isLocked(int x, int y) {
@@ -142,7 +119,8 @@ public class SudokuPuzzle {
 	public bool isLegalMove(int x, int y, int value) {
 		return isLegalCol(x, value)
 		    && isLegalRow(y, value)
-		    && isLegalSquare(x / 3, y / 3, value);
+		    && isLegalSquareXY(x, y, value)
+			&& !isLocked(x, y);
 	}
 
 	public int constraintTestRow(int row) {
