@@ -10,12 +10,11 @@ namespace AI_Sudoku_Solver
         Stopwatch stopwatch = new Stopwatch();
         StringBuilder traceBuilder = new StringBuilder();
         Random rand = new Random();
-        int maximumRuns = 1000;
+        int maximumRuns = 2500;
         double temperature = 1000;
-        double coolingMultiplier = 0.9999;
+        double coolingMultiplier = 0.999;
         int scoreFinal;
         int initialScore;
-        private PuzzleChecker checker = new PuzzleChecker();
 
         public SudokuPuzzle LocalSearchSimulatedAnnealing(SudokuPuzzle _puzzle)
         {
@@ -34,9 +33,6 @@ namespace AI_Sudoku_Solver
                     }
                 }
             }
-
-            //Console.WriteLine(_puzzle.toOutputString());
-            //Console.WriteLine("" + Score(_puzzle));
             initialScore = Score(_puzzle);
             Swap(_puzzle);
             return _puzzle;
@@ -74,6 +70,7 @@ namespace AI_Sudoku_Solver
             int totalEights = currentBox.Count(n => n == 8);
             int totalNines = currentBox.Count(n => n == 9);
 
+            // If value has not been used, return it
             if (totalOnes == 0)
                 return 1;
             else if (totalTwos == 0)
@@ -101,9 +98,9 @@ namespace AI_Sudoku_Solver
             {
                 //Tracing information  
                 Log("");
-                Log("Run Number: " + i); 
-                Log(_puzzle.ToString()); 
-                Log(""); 
+                Log("Run Number: " + i);
+                Log(_puzzle.ToString());
+                Log("Current Score: " + scoreFinal);
                 Log("-----------------------------------------------------------");
                 
                 temperature = (temperature * coolingMultiplier);
@@ -113,14 +110,11 @@ namespace AI_Sudoku_Solver
                 FindValidSwap(_puzzle, x, y);
 
                 double deltaScore = Score(currentPuzzle) - Score(_puzzle);
-                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 /*- rand.NextDouble()*/;
-
-                //Console.WriteLine("Accept Score: " + acceptScore);
+                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 - rand.NextDouble();
 
                 if (acceptScore > 0)
                     _puzzle = currentPuzzle.copy();
 
-                //Console.WriteLine("" + Score(_puzzle));
                 Score(_puzzle);
             }
         }
@@ -148,6 +142,7 @@ namespace AI_Sudoku_Solver
 
                 _puzzle.setValue(x1, y1, value2);
                 _puzzle.setValue(x2, y2, value1);
+                Log("Switched: (" + x1 + ", " + y1 + ") " + value1 + " with (" + x2 + ", " + y2 + ") " + value2);
             }
 
             if (!isValid)
@@ -188,20 +183,20 @@ namespace AI_Sudoku_Solver
             return score;
         }
 
+        // Starts method to solve Sudoku puzzle
         public SudokuPuzzle solve(SudokuPuzzle _puzzle)
         {
             traceBuilder.Clear();
-
             stopwatch.Restart();
             SudokuPuzzle solution = LocalSearchSimulatedAnnealing(_puzzle);
             stopwatch.Stop();
-            if (solution.constraintTest() == 0)
-            {
+            if (scoreFinal == 0)
                 return solution;
-            }
+
             return null;
         }
 
+        // Finds the time elapsed while solving
         public long GetElapsedTimeMili()
         {
             return stopwatch.ElapsedMilliseconds;
@@ -217,6 +212,7 @@ namespace AI_Sudoku_Solver
             return traceBuilder.ToString();
         }
 
+        // Results sent to the console window
         public string result()
         {
             return "ms: " + stopwatch.ElapsedMilliseconds + " | Starting Puzzle Violation Score " + initialScore + " Final Puzzle Violation Score: " + scoreFinal;
