@@ -27,6 +27,7 @@ namespace AI_Sudoku_Solver
                     {
                         for (int y = 3*j; y < 3*j+3; y++)
                         {
+                            // If the current cell is unfilled/unknown then fill with an unused value
                             if (_puzzle.getValue(x, y) == -1)
                                 _puzzle.setValue(x, y, GetUnusedValue(_puzzle, x, y));
                         }
@@ -109,9 +110,13 @@ namespace AI_Sudoku_Solver
                 SudokuPuzzle currentPuzzle = _puzzle.copy();
                 FindValidSwap(_puzzle, x, y);
 
+                // Finds the deltaScore (change in score) between the current and next puzzle
                 double deltaScore = Score(currentPuzzle) - Score(_puzzle);
+
+                // Calculates the acceptScore which is used to determine if the next puzzle is accepted or current puzzle is kept
                 double acceptScore = Math.Exp(-deltaScore / temperature) - rand.NextDouble();
 
+                // Decides to accept the new puzzle or keep the old puzzle
                 if (acceptScore > 0)
                     _puzzle = currentPuzzle.copy();
 
@@ -124,6 +129,7 @@ namespace AI_Sudoku_Solver
         {
             bool isValid = false;
 
+            // Finding the coordinates to be used for a swap
             int x1 = GenerateRandomX(_x);
             int y1 = GenerateRandomY(_y);
 
@@ -135,6 +141,7 @@ namespace AI_Sudoku_Solver
             else
                 isValid = true;
 
+            // If the swap is valid, perform the swap
             if (isValid)
             {
                 int value1 = _puzzle.getValue(x1, y1);
@@ -202,6 +209,7 @@ namespace AI_Sudoku_Solver
             return stopwatch.ElapsedMilliseconds;
         }
 
+        // Used for logging data to an output file
         protected void Log(string message)
         {
             traceBuilder.AppendLine(message);
