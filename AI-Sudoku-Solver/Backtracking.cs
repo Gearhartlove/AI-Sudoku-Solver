@@ -259,6 +259,9 @@ namespace Backtracking {
 					square[i] &= mask;
 
 					if (row[i] == 0 || col[i] == 0 || square[i] == 0) {
+						log("");
+						log("   (" + description.x + ", " + description.y + ") has an empty domain.");
+						log("   !!Domain Wipe Out!!  ");
 						return false;
 					} 
 				}
