@@ -5,9 +5,6 @@ using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
 
-//LOG TO OUTPUF FILE 
-//Implement the Interface for Formatting 
-//Make formatting method 
 namespace AI_Sudoku_Solver
 {
     public class GeneticAlgorithm : ISolver
@@ -226,6 +223,7 @@ namespace AI_Sudoku_Solver
         /// <returns></returns>
        private bool Evaluate(List<Population> cross_children)
        {
+           //test the constraints of both children
            cross_children[0].constraints_violated = cross_children[0].pop.constraintTest();
            cross_children[1].constraints_violated = cross_children[1].pop.constraintTest();
 
@@ -274,7 +272,15 @@ namespace AI_Sudoku_Solver
             endPopMedian = 0;
             traceBuilder.Clear();
         }
-
+        /// <summary>
+        /// Gather insights about the population, including best and worst population members, mean, and medien
+        /// constraints violated population members.
+        /// </summary>
+        /// <param name="randPopulation"></param>
+        /// <param name="mean"></param>
+        /// <param name="median"></param>
+        /// <param name="best"></param>
+        /// <param name="worst"></param>
         private void Insights(in List<Population> randPopulation, ref double mean, ref double median, ref int best, 
             ref int worst)
         {
@@ -293,6 +299,12 @@ namespace AI_Sudoku_Solver
                 best = randPopulation[randPopulation.Count - 1].constraints_violated;
         }
 
+        /// <summary>
+        /// Used for writing to the output file in bin/Debug/output/genetic \local \search  to track the mutation
+        /// and crossover children
+        /// </summary>
+        /// <param name="parents"></param>
+        /// <param name="children"></param>
         public void Tracing(in List<Population> parents, in List<Population> children)
         {
             log("Parents:");
@@ -315,16 +327,28 @@ namespace AI_Sudoku_Solver
             log("-------------------------------------------------------------------------------");
         }
         
+        /// <summary>
+        /// Supportive method to make writing traces easier
+        /// </summary>
+        /// <returns></returns>
         public string traceWriter()
         {
             return traceBuilder.ToString();
         }
 
+        /// <summary>
+        /// Supportive to make logging traces easier (recording important user strings)
+        /// </summary>
+        /// <param name="mesesage"></param>
         public void log(string mesesage)
         {
             traceBuilder.AppendLine(mesesage);
         }
-
+        
+        /// <summary>
+        /// Output to terminal when program is run
+        /// </summary>
+        /// <returns></returns>
         public string result()
         {
             return "\n    \t(Constraints violated by the population)\n    \tSTART worst: " + startWorstPopulation
@@ -335,6 +359,10 @@ namespace AI_Sudoku_Solver
 
         }
 
+        /// <summary>
+        /// Name of the algorithm
+        /// </summary>
+        /// <returns></returns>
         public string solverName() {
             return "Genetic Local Search";
         }
