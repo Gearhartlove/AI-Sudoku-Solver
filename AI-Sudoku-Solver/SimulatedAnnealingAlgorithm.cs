@@ -110,7 +110,7 @@ namespace AI_Sudoku_Solver
                 FindValidSwap(_puzzle, x, y);
 
                 double deltaScore = Score(currentPuzzle) - Score(_puzzle);
-                double acceptScore = Math.Exp(-deltaScore / temperature) - 1 - rand.NextDouble();
+                double acceptScore = Math.Exp(-deltaScore / temperature) - rand.NextDouble();
 
                 if (acceptScore > 0)
                     _puzzle = currentPuzzle.copy();
@@ -215,7 +215,7 @@ namespace AI_Sudoku_Solver
         // Results sent to the console window
         public string result()
         {
-            return "ms: " + stopwatch.ElapsedMilliseconds + " | Starting Puzzle Violation Score " + initialScore + " Final Puzzle Violation Score: " + scoreFinal;
+            return "ms: " + stopwatch.ElapsedMilliseconds + "\nStarting Puzzle Violation Score: " + initialScore + " | Final Puzzle Violation Score: " + scoreFinal;
         }
 
         public string solverName()
